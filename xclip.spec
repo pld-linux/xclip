@@ -15,17 +15,17 @@ BuildRequires:	imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xclip is a command line utility that provides an interface to X selections
-("the clipboard"). It can read data from standard in or a file and place
-it in an X selection for pasting into other X applications. xclip can
-also print an X selection to standard out, which can then be redirected
-to a file or another program.
+xclip is a command line utility that provides an interface to X
+selections ("the clipboard"). It can read data from standard in or a
+file and place it in an X selection for pasting into other X
+applications. xclip can also print an X selection to standard out,
+which can then be redirected to a file or another program.
 
 %description -l pl
-xclip jest narzêdziem linii poleceñ dostarczaj±cym interfejsu do schowka
-X Window System. Mo¿e czytaæ dane ze standardowego wej¶cia lub pliku i
-wstawiaæ je do schowka X w celu wklejenia do innych aplikacji. Mo¿e
-równie¿ wypisaæ zawarto¶æ schowka na standardowe wyj¶cie, które
+xclip jest narzêdziem linii poleceñ dostarczaj±cym interfejsu do
+schowka X Window System. Mo¿e czytaæ dane ze standardowego wej¶cia lub
+pliku i wstawiaæ je do schowka X w celu wklejenia do innych aplikacji.
+Mo¿e równie¿ wypisaæ zawarto¶æ schowka na standardowe wyj¶cie, które
 nastêpnie mo¿na przekierowaæ do pliku lub innego programu.
 
 %prep
