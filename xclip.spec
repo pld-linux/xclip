@@ -1,5 +1,5 @@
 Summary:	An interface to X selections ("the clipboard")
-Summary(pl):	Interfejs do schowka X-Window
+Summary(pl):	Interfejs do schowka X Window System
 Name:		xclip
 Version:	0.08
 Release:	1
@@ -7,16 +7,15 @@ Epoch:		0
 License:	GPL v2+
 Vendor:		Kim Saunders <kims@debian.org>
 Group:		X11/Applications
-Source0:	http://people.debian.org/~kims/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://people.debian.org/~kims/xclip/%{name}-%{version}.tar.gz
 # Source0-md5:	a90bde3fb0da6aad3a6042c4867245c6
 URL:		http://people.debian.org/~kims/xclip/
-BuildRequires:	X11-imake
-BuildRequires:	X11-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define         _mandir         %{_prefix}/man
-
 
 %description
 xclip is a command line utility that provides an interface to X selections
@@ -27,8 +26,10 @@ to a file or another program.
 
 %description -l pl
 xclip jest narzêdziem linii poleceñ dostarczaj±cym interfejsu do schowka
-X-Window. Mo¿e czytaæ dane ze standardowego wej¶cia lub pliku i wstawiæ
-je do schowka. Mo¿e równie¿ wypisaæ zawarto¶æ schowka.
+X Window System. Mo¿e czytaæ dane ze standardowego wej¶cia lub pliku i
+wstawiaæ je do schowka X w celu wklejenia do innych aplikacji. Mo¿e
+równie¿ wypisaæ zawarto¶æ schowka na standardowe wyj¶cie, które
+nastêpnie mo¿na przekierowaæ do pliku lub innego programu.
 
 %prep
 %setup -q -n %{name}
