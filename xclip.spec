@@ -14,9 +14,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define         _mandir         %{_prefix}/man
-
 %description
 xclip is a command line utility that provides an interface to X selections
 ("the clipboard"). It can read data from standard in or a file and place
@@ -42,7 +39,9 @@ xmkmf
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install install.man \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	MANPATH=%{_mandir} \
+	BINDIR=%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
