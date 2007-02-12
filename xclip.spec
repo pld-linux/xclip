@@ -1,5 +1,5 @@
 Summary:	An interface to X selections ("the clipboard")
-Summary(pl.UTF-8):   Interfejs do schowka X Window System
+Summary(pl.UTF-8):	Interfejs do schowka X Window System
 Name:		xclip
 Version:	0.08
 Release:	1
