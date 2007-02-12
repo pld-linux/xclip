@@ -1,5 +1,5 @@
 Summary:	An interface to X selections ("the clipboard")
-Summary(pl):	Interfejs do schowka X Window System
+Summary(pl.UTF-8):   Interfejs do schowka X Window System
 Name:		xclip
 Version:	0.08
 Release:	1
@@ -21,12 +21,12 @@ file and place it in an X selection for pasting into other X
 applications. xclip can also print an X selection to standard out,
 which can then be redirected to a file or another program.
 
-%description -l pl
-xclip jest narzêdziem linii poleceñ dostarczaj±cym interfejsu do
-schowka X Window System. Mo¿e czytaæ dane ze standardowego wej¶cia lub
-pliku i wstawiaæ je do schowka X w celu wklejenia do innych aplikacji.
-Mo¿e równie¿ wypisaæ zawarto¶æ schowka na standardowe wyj¶cie, które
-nastêpnie mo¿na przekierowaæ do pliku lub innego programu.
+%description -l pl.UTF-8
+xclip jest narzÄ™dziem linii poleceÅ„ dostarczajÄ…cym interfejsu do
+schowka X Window System. MoÅ¼e czytaÄ‡ dane ze standardowego wejÅ›cia lub
+pliku i wstawiaÄ‡ je do schowka X w celu wklejenia do innych aplikacji.
+MoÅ¼e rÃ³wnieÅ¼ wypisaÄ‡ zawartoÅ›Ä‡ schowka na standardowe wyjÅ›cie, ktÃ³re
+nastÄ™pnie moÅ¼na przekierowaÄ‡ do pliku lub innego programu.
 
 %prep
 %setup -q -n %{name}
