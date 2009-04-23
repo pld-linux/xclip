@@ -2,7 +2,7 @@ Summary:	An interface to X selections ("the clipboard")
 Summary(pl.UTF-8):	Interfejs do schowka X Window System
 Name:		xclip
 Version:	0.08
-Release:	1
+Release:	2
 Epoch:		0
 License:	GPL v2+
 Vendor:		Kim Saunders <kims@debian.org>
