@@ -46,5 +46,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_mandir}/man*/*
+%attr(755,root,root) %{_bindir}/xclip
+%attr(755,root,root) %{_bindir}/xclip-copyfile
+%attr(755,root,root) %{_bindir}/xclip-cutfile
+%attr(755,root,root) %{_bindir}/xclip-pastefile
+%{_mandir}/man1/xclip.1*
