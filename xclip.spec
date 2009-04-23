@@ -1,17 +1,16 @@
 Summary:	An interface to X selections ("the clipboard")
 Summary(pl.UTF-8):	Interfejs do schowka X Window System
 Name:		xclip
-Version:	0.08
-Release:	2
+Version:	0.11
+Release:	1
 Epoch:		0
 License:	GPL v2+
-Vendor:		Kim Saunders <kims@debian.org>
 Group:		X11/Applications
-Source0:	http://people.debian.org/~kims/xclip/%{name}-%{version}.tar.gz
-# Source0-md5:	a90bde3fb0da6aad3a6042c4867245c6
-URL:		http://people.debian.org/~kims/xclip/
-BuildRequires:	XFree86-devel
-BuildRequires:	imake
+Source0:	http://dl.sourceforge.net/xclip/%{name}-%{version}.tar.gz
+# Source0-md5:	4caf3a2b03c36981f9af36a8e8582951
+URL:		http://sourceforge.net/projects/xclip
+BuildRequires:	xorg-lib-libICE-devel
+BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,25 +28,23 @@ Może również wypisać zawartość schowka na standardowe wyjście, które
 następnie można przekierować do pliku lub innego programu.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
-xmkmf
-%{__make} CDEBUGFLAGS="%{rpmcflags}"
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install install.man \
-	DESTDIR=$RPM_BUILD_ROOT \
-	MANPATH=%{_mandir} \
-	BINDIR=%{_bindir}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc README
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_mandir}/man*/*
