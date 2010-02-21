@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/xclip/%{name}-%{version}.tar.gz
 # Source0-md5:	f7e19d3e976fecdc1ea36cd39e39900d
 URL:		http://sourceforge.net/projects/xclip
 BuildRequires:	xorg-lib-libICE-devel
+BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
