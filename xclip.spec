@@ -1,13 +1,13 @@
 Summary:	An interface to X selections ("the clipboard")
 Summary(pl.UTF-8):	Interfejs do schowka X Window System
 Name:		xclip
-Version:	0.11
+Version:	0.12
 Release:	1
 Epoch:		0
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/xclip/%{name}-%{version}.tar.gz
-# Source0-md5:	4caf3a2b03c36981f9af36a8e8582951
+# Source0-md5:	f7e19d3e976fecdc1ea36cd39e39900d
 URL:		http://sourceforge.net/projects/xclip
 BuildRequires:	xorg-lib-libICE-devel
 BuildRequires:	xorg-util-imake
@@ -51,3 +51,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xclip-cutfile
 %attr(755,root,root) %{_bindir}/xclip-pastefile
 %{_mandir}/man1/xclip.1*
+%{_mandir}/man1/xclip-copyfile.1*
