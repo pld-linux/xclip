@@ -1,17 +1,16 @@
 Summary:	An interface to X selections ("the clipboard")
 Summary(pl.UTF-8):	Interfejs do schowka X Window System
 Name:		xclip
-Version:	0.12
-Release:	2
+Version:	0.13
+Release:	1
 Epoch:		0
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/xclip/%{name}-%{version}.tar.gz
-# Source0-md5:	f7e19d3e976fecdc1ea36cd39e39900d
-URL:		http://sourceforge.net/projects/xclip
+Source0:	https://github.com/astrand/%{name}/archive/%{version}.tar.gz
+# Source0-md5:	81e49f56288f299e3389a019f2550ad2
+URL:		https://github.com/astrand/xclip
 BuildRequires:	xorg-lib-libICE-devel
 BuildRequires:	xorg-lib-libXmu-devel
-BuildRequires:	xorg-util-imake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,6 +31,7 @@ następnie można przekierować do pliku lub innego programu.
 %setup -q
 
 %build
+%{__autoconf}
 %configure
 %{__make}
 
